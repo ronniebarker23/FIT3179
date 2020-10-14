@@ -1,3 +1,48 @@
 {
+ "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+ "width": 800,
+ "height": 600,
+ "title": "Significant Earthquakes from 1965 to 2016",
+ "projection": {"type": "equalEarth"},
   
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Homwork4/js/world.geo (1).json",
+        "format": {"type": "topojson", "feature": "world"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Homwork4/data/database.csv"
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"}
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "circle",
+            "tooltip": {"content": "data"}
+          },
+          "encoding": {
+            "size": {"field": "Magnitude", 
+                     "type": "quantitative",
+                     "scale": {
+                          "domain": [5.5, 9.1]
+                        }},
+            "color": {"field": "Depth", 
+                      "type": "quantitative",
+                      "scale":{
+                          "scheme":"reds"
+                      }          
+            }
+          }
+        }
+      ]
+    }
+  ]
 }

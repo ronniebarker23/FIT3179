@@ -9,7 +9,7 @@
  "transform": [
  {"filter": "datum.Active > 0"},
 {"filter": "datum.Deaths > 0"}
- ]
+ ],
  "mark": "circle",
  "encoding": {
  "x": {

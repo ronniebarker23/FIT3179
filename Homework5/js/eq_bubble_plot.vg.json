@@ -16,7 +16,7 @@
  "y": {
  "field": "Depth",
  "type": "quantitative"
- }
+ },
  "color": {
  "field": "Type",
  "type": "nominal"

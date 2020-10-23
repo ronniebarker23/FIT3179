@@ -1,4 +1,4 @@
-"","Date","Time","Latitude","Longitude","Type","Depth","Depth.Error","Depth.Seismic.Stations","Magnitude","Magnitude.Type","Magnitude.Error","Magnitude.Seismic.Stations","Azimuthal.Gap","Horizontal.Distance","Horizontal.Error","Root.Mean.Square","ID","Source","Location.Source","Magnitude.Source","Status"
+"","Date","Time","Latitude","Longitude","Type","Depth","Depth.Error","Depth.Seismic.Stations","Magnitude","Magnitude.Type","Magnitude.Error","Magnitude.Seismic.Stations","Azimuthal.Gap","Horizontal_Distance","Horizontal.Error","Root.Mean.Square","ID","Source","Location.Source","Magnitude.Source","Status"
 "566","12/20/1966","15:30:01",37.3021667,-116.4083333,"Nuclear Explosion",1.2,31.61,16,5.62,"ML",0.245,10,261,1.476,99,0.86,"CI3329931","CI","CI","CI","Reviewed"
 "891","04/09/1968","02:29:00",33.1798333,-116.103,"Earthquake",10,31.61,15,6.6,"MW",NA,0,128,0.6012,0.88,0.33,"CI3329122","CI","CI","CI","Reviewed"
 "898","04/26/1968","15:00:02",37.2953333,-116.4556667,"Nuclear Explosion",1.2,31.61,17,5.63,"ML",0.125,6,261,1.438,99,1.03,"CI3342128","CI","CI","CI","Reviewed"

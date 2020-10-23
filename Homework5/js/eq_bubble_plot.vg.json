@@ -16,14 +16,6 @@
  "y": {
  "field": "Depth",
  "type": "quantitative"
- },
- "color": {
- "field": "Type",
- "type": "nominal"
- },
- "size": {
- "field": "Horizontal Distance",
- "type": "quantitative"
  }
  }
 }

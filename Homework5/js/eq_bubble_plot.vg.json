@@ -1,29 +1,37 @@
 {
- "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
- "width": 500,
- "height": 400,
- "title": "Major Earthquakes 1965 - 2016",
- "data": {
- "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Homework5/data/earthquakes2Sample.csv"
- },
- "mark": "circle",
- "encoding": {
- "x": {
- "field": "Magnitude",
- "type": "quantitative",
- "title": "Confirmed Cases"
- },
- "y": {
- "field": "Depth",
- "type": "quantitative"
- },
- "color": {
- "field": "Type",
- "type": "nominal"
- },
- "size": {
- "field": "Horizontal Distance",
- "type": "quantitative"
- }
- }
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 400,
+  "title": "Major Earthquakes 1965 - 2016",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Homework5/data/earthquakes2.csv"
+  },
+  "mark": "circle",
+  "encoding": {
+    "x": {
+      "field": "Magnitude",
+      "type": "quantitative",
+      "title": "Magnitude",
+      "axis": {"tickCount": 10},
+      "scale": {"domain": [5, 9.2]}
+    },
+    "y": {"field": "Depth", "type": "quantitative",
+      "axis": {"tickCount": 14},
+      "scale": {"domain": [0, 700]}},
+    "color": {"field": "Type", "type": "nominal",
+    "scale": {
+      "domain": ["Earthquake","Nuclear"
+        ],
+      "range": [
+       "#377eb8",
+        "#ff7f00"
+    ]}},
+    "opacity": {
+       "value": 0.6
+    },
+    "size": {
+      "field": "Horizontal_Distance",
+      "type": "quantitative"
+    } 
+  }
 }

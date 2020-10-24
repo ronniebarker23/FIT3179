@@ -19,16 +19,8 @@
   }
  }
  ],"transform": [
-   {"filter": "datum.Year < Date_To"}
+   {"filter": "datum.Year <= Date_To"}
  ],
-  "selection": {
-    "type_highlight": {
-    "type": "multi",
-    "fields": ["Type"],
-    "bind": "legend"
- }
- },
-  "mark": "circle",
   "encoding": {
     "x": {
       "field": "Magnitude",
@@ -39,16 +31,27 @@
     },
     "y": {"field": "Depth", "type": "quantitative",
       "axis": {"tickCount": 14},
-      "scale": {"domain": [0, 700]}},
+      "scale": {"domain": [0, 700]}}
+    },
+    "layer": [
+    {
+      "selection": {
+    "type_highlight": {
+    "type": "multi",
+    "fields": ["Type"],
+    "bind": "legend"
+  }
+  },
+    "mark": "circle",
+      "encoding": {
     "color": {"field": "Type", "type": "nominal",
     "scale": {
       "domain": ["Earthquake","Nuclear"
         ],
       "range": [
        "#377eb8",
-        "#ff7f00"
-    ]}},
-    "opacity": {
+        "#ff7f00"]}},
+     "opacity": {
        "condition": {"selection": "type_highlight",    "value": 0.6},
       "value": 0.2
     },
@@ -62,6 +65,37 @@
       {"field": "Depth", "type": "quantitative", "format": ","},
       {"field": "Horizontal_Distance", "type": "quantitative", "format": ","},
       {"field": "Date", "type": "temporal", "format": "%m/%d/%Y"}
+    ]}
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Year", "type": "quantitative"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Magnitude'] > '7.5' && datum['Depth'] > '400'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+      {"field": "Type", "type": "nominal"},
+      {"field": "Magnitude", "type": "quantitative", "format": ","},
+      {"field": "Depth", "type": "quantitative", "format": ","},
+      {"field": "Horizontal_Distance", "type": "quantitative", "format": ","},
+      {"field": "Date", "type": "temporal", "format": "%m/%d/%Y"}
     ]
-  }
+      }
+    }
+ ]
+   
+  
 }

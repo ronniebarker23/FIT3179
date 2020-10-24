@@ -6,6 +6,28 @@
   "data": {
     "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Homework5/data/earthquakes2.csv"
   },
+  "params": [
+ {
+ "name": "Date_To",
+ "value": 2016,
+ "bind": {
+  "input": "range",
+  "min": 1965,
+  "max": 2016,
+  "step": 1,
+  "name": "Earthquakes up to year"
+  }
+ }
+ ],"transform": [
+   {"filter": "datum.Year < Date_To"}
+ ],
+  "selection": {
+    "type_highlight": {
+    "type": "multi",
+    "fields": ["Type"],
+    "bind": "legend"
+ }
+ },
   "mark": "circle",
   "encoding": {
     "x": {
@@ -13,7 +35,7 @@
       "type": "quantitative",
       "title": "Magnitude",
       "axis": {"tickCount": 10},
-      "scale": {"domain": [5, 9.2]}
+      "scale": {"domain": [5, 9]}
     },
     "y": {"field": "Depth", "type": "quantitative",
       "axis": {"tickCount": 14},
@@ -27,7 +49,8 @@
         "#ff7f00"
     ]}},
     "opacity": {
-       "value": 0.6
+       "condition": {"selection": "type_highlight",    "value": 0.6},
+      "value": 0.2
     },
     "size": {
       "field": "Horizontal_Distance",

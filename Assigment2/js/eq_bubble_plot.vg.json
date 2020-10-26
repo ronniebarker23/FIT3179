@@ -4,7 +4,7 @@
   "height": 400,
   "title": "Major Earthquakes 1965 - 2016",
   "data": {
-    "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Homework5/data/earthquakes2.csv"
+    "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assignment2/data/earthquakes2.csv"
   },
   "params": [
  {

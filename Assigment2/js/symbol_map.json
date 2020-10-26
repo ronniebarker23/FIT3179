@@ -14,7 +14,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/database.csv"
+        "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/earthquakes6.csv"
       },
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
@@ -24,15 +24,15 @@
         {
           "mark": {"type": "circle", "tooltip": {"content": "data"}},
           "encoding": {
-            "size": {
+            "color": {
               "field": "Magnitude",
               "type": "quantitative",
-              "scale": {"domain": [5.5, 9.1]}
+              "scale": {"scheme": "reds"}
             },
-            "color": {
-              "field": "Depth",
+            "size": {
+              "field": "Horizontal_Distance",
               "type": "quantitative",
-              "scale": {"scheme": "purples"}
+              "scale": {"domain": [5.5, 9.1]}
             }
           }
         }

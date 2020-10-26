@@ -22,7 +22,7 @@
       },
       "layer": [
         {
-          "mark": {"type": "circle", "tooltip": {"content": "data"}},
+          "mark": {"type": "circle"},
           "encoding": {
             "color": {
               "field": "Magnitude",
@@ -33,7 +33,11 @@
               "field": "Horizontal_Distance",
               "type": "quantitative",
               "scale": {"domain": [5.5, 9.1]}
-            }
+            },
+            "tooltip": [{"field": "Magnitude", "type": "quantitative", "format": ","},
+      {"field": "Depth", "type": "quantitative", "format": ","},
+      {"field": "Horizontal_Distance", "type": "quantitative", "format": ","},
+      {"field": "Date", "type": "temporal", "format": "%m/%d/%Y"}]
           }
         }
       ]

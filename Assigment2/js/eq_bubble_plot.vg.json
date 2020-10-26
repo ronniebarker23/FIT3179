@@ -38,9 +38,9 @@
   "layer": [
     {
       "selection": {
-        "type_highlight": {
+        "continent_highlight": {
           "type": "multi",
-          "fields": ["Type"],
+          "fields": ["Continent"],
           "bind": "legend"
         }
       },
@@ -55,8 +55,8 @@
           }
         },
         "opacity": {
-          "condition": {"selection": "type_highlight", "value": 0.6},
-          "value": 0.2
+          "condition": {"selection": "continent_highlight", "value": 0.8},
+          "value": 0.1
         },
         "size": {"field": "Horizontal_Distance", "type": "quantitative"},
         "tooltip": [
@@ -68,7 +68,9 @@
             "type": "quantitative",
             "format": ","
           },
-          {"field": "Date", "type": "temporal", "format": "%m/%d/%Y"}
+          {"field": "Date", "type": "temporal", "format": "%m/%d/%Y"},
+          {"field": "Continent", "type": "nominal"},
+          {"field": "Country", "type": "nominal"}
         ]
       }
     },
@@ -100,7 +102,9 @@
             "type": "quantitative",
             "format": ","
           },
-          {"field": "Date", "type": "temporal", "format": "%m/%d/%Y"}
+          {"field": "Date", "type": "temporal", "format": "%m/%d/%Y"},
+          {"field": "Continent", "type": "nominal"},
+          {"field": "Country", "type": "nominal"}
         ]
       }
     }

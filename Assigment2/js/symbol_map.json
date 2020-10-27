@@ -10,7 +10,7 @@
         "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/js/ne_50m_admin_0_countries.json",
         "format": {"type": "topojson", "feature": "ne_50m_admin_0_countries"}
       },
-      "mark": {"type": "geoshape", "fill": "lightgreen", "stroke": "grey"}
+      "mark": {"type": "geoshape", "fill": "#e5f5e0", "stroke": "grey"}
     },
     {
       "data": {
@@ -34,10 +34,16 @@
               "type": "quantitative",
               "scale": {"domain": [5.5, 9.1]}
             },
-            "tooltip": [{"field": "Magnitude", "type": "quantitative", "format": ","},
-      {"field": "Depth", "type": "quantitative", "format": ","},
-      {"field": "Horizontal_Distance", "type": "quantitative", "format": ","},
-      {"field": "Date", "type": "temporal", "format": "%m/%d/%Y"}]
+            "tooltip": [
+              {"field": "Magnitude", "type": "quantitative", "format": ","},
+              {"field": "Depth", "type": "quantitative", "format": ","},
+              {
+                "field": "Horizontal_Distance",
+                "type": "quantitative",
+                "format": ","
+              },
+              {"field": "Date", "type": "temporal", "format": "%m/%d/%Y"}
+            ]
           }
         }
       ]

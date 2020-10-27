@@ -1,5 +1,5 @@
 {"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 500,
+  "width": 400,
   "height": 400,
   "title": "Earthquakes over Time",
   "data": {

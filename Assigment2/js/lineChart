@@ -1,0 +1,8 @@
+{
+  "data": {"url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/earthquakes6.csv"},
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Date", "type": "temporal","axis": {"grid": false}},
+    "y": {"aggregate": "count", "field": "Magnitude","title": "Number of Earthquakes","axis": {"grid": false}}
+  }
+}

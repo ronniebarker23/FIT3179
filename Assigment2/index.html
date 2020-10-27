@@ -26,6 +26,9 @@
 <h2>Number of Earthquakes</h2>
 <div id="bar_chart"></div>
 
+<h2>Number of Earthquakes over Time</h2>
+<div id="line_chart"></div>
+  
 <script type="text/javascript">
   
   var spec1 = "js/symbol_map.json";
@@ -40,6 +43,11 @@
   
   var spec3 = "js/barChart.vg.json";
   vegaEmbed('#bar_chart', spec3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var spec4 = "js/lineChart.vg.json";
+  vegaEmbed('#line_chart', spec4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   

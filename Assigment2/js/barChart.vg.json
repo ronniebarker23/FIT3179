@@ -34,7 +34,7 @@
   "mark": "bar",
   "encoding": {
     "x": {"field": "Country", "type": "nominal"},
-    "y": {"aggregate": "count", "field": "Magnitude"},
+    "y": {"aggregate": "count", "field": "Magnitude","title": "Number of Earthquakes"},
     "color": {
           "field": "Continent",
           "type": "nominal",

@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 350,
   "height": 350,
-  "title": "Number of Earthquakes",
+  "title": "Earthquakes per Country",
   "data": {
     "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/earthquakes6.csv"
   },

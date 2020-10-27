@@ -1,6 +1,6 @@
 {"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 400,
-  "height": 400,
+  "width": 200,
+  "height": 300,
   "title": "Earthquakes over Time",
   "data": {
     "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/earthquakes6.csv"

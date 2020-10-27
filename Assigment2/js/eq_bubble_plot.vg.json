@@ -25,13 +25,13 @@
       "field": "Magnitude",
       "type": "quantitative",
       "title": "Magnitude",
-      "axis": {"tickCount": 10},
+      "axis": {"tickCount": 10,"grid": false},
       "scale": {"domain": [5, 9]}
     },
     "y": {
       "field": "Depth",
       "type": "quantitative",
-      "axis": {"tickCount": 14},
+      "axis": {"tickCount": 14,"grid":false},
       "scale": {"domain": [0, 700]}
     }
   },
@@ -72,11 +72,15 @@
           "condition": {"selection": "continent_highlight", "value": 0.9},
           "value": 0.1
         },
-        "size": {"field": "Horizontal_Distance", "type": "quantitative","scale": {
- "type": "threshold",
- "domain": [0,10,20,30],
- "range": [20,40,80,160,320]
- }},
+        "size": {
+          "field": "Horizontal_Distance",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [0, 10, 20, 30],
+            "range": [20, 40, 80, 160, 320]
+          }
+        },
         "tooltip": [
           {"field": "Type", "type": "nominal"},
           {"field": "Magnitude", "type": "quantitative", "format": ","},

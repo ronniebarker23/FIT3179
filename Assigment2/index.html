@@ -20,6 +20,9 @@
 
 <h2>Magnitude and Depth of Earthquakes over Time</h2>
 <div id="scatter_plot"></div>
+  
+<h2>Number of Earthquakes</h2>
+<div id="bar_chart"></div>
 
 <script type="text/javascript">
   
@@ -32,6 +35,12 @@
   vegaEmbed('#scatter_plot', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+  
+  var spec3 = "js/barChart.vg.json";
+  vegaEmbed('#bar_chart', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
 </script>
 
 </body>

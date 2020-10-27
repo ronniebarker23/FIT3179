@@ -1,8 +1,88 @@
-{
-  "data": {"url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/earthquakes6.csv"},
+{"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 400,
+  "title": "Earthquakes over Time",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/earthquakes6.csv"
+  },"params": [
+ {
+ "name": "Continent_selection",
+ "bind": {
+ "input": "select",
+ "options": [
+ null,
+ "Africa",
+ "Americas",
+ "Asia",
+ "Europe",
+ "Oceania",
+ "Ocean"
+ ],
+ "labels":[
+ "Show All",
+ "Africa",
+ "Americas",
+ "Asia",
+ "Europe",
+ "Oceania",
+ "Ocean"
+ ],
+ "name": "Continent Selection: "
+ }
+ }
+ ],
+  "transform": [
+    {
+      "aggregate": [{
+       "op": "count",
+       "field": "Magnitude",
+       "as": "quake_per_year"
+      }],
+      "groupby": ["Year","Continent"]
+    },
+    {"filter": "Continent_selection == null || datum.Continent == Continent_selection"}
+  ],
+  "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["Continent"],
+          "bind": "legend"
+        }
+      },
   "mark": "line",
   "encoding": {
-    "x": {"field": "Date", "type": "temporal","axis": {"grid": false}},
-    "y": {"aggregate": "count", "field": "Magnitude","title": "Number of Earthquakes","axis": {"grid": false}}
+    "x": {"field": "Year", "type": "temporal","scale":{"domain":[{"year": 1965}, {"year": 2016}]}, "axis": {"grid": false}},
+    "y": {
+      "field": "quake_per_year",
+      "title": "Number of Earthquakes",
+      "type": "quantitative",
+      "axis": {"grid": false}
+    },
+    "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Africa",
+              "Americas",
+              "Asia",
+              "Europe",
+              "Oceania",
+              "Ocean"
+            ],
+            "range": [
+              "#f0a313",
+              "#ed72c4",
+              "#e81c0e",
+              "#64068c",
+              "#dee64c",
+              "#158eb0"
+            ]
+          }},
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 0.9},
+          "value": 0.1
+        },
+        "tooltip": {"field": "quake_per_year", "type": "quantitative"}
   }
 }

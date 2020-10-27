@@ -1,0 +1,8 @@
+{
+  "data": {"url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/earthquakes6.csv"},
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Country", "type": "nominal"},
+    "y": {"aggregate": "sum", "field": "Magnitude"}
+  }
+}

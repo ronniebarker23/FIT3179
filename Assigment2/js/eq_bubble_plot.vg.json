@@ -50,15 +50,33 @@
           "field": "Continent",
           "type": "nominal",
           "scale": {
-            "domain": ["Africa", "Americas","Asia","Europe","Oceania", "Ocean"],
-            "range": ["#f0a313", "#ed72c4","#e81c0e","#64068c","#dee64c","#158eb0"]
+            "domain": [
+              "Africa",
+              "Americas",
+              "Asia",
+              "Europe",
+              "Oceania",
+              "Ocean"
+            ],
+            "range": [
+              "#f0a313",
+              "#ed72c4",
+              "#e81c0e",
+              "#64068c",
+              "#dee64c",
+              "#158eb0"
+            ]
           }
         },
         "opacity": {
-          "condition": {"selection": "continent_highlight", "value": 0.8},
+          "condition": {"selection": "continent_highlight", "value": 0.9},
           "value": 0.1
         },
-        "size": {"field": "Horizontal_Distance", "type": "quantitative"},
+        "size": {"field": "Horizontal_Distance", "type": "quantitative","scale": {
+ "type": "threshold",
+ "domain": [0,10,20,30],
+ "range": [20,40,80,160,320]
+ }},
         "tooltip": [
           {"field": "Type", "type": "nominal"},
           {"field": "Magnitude", "type": "quantitative", "format": ","},

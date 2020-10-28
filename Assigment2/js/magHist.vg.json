@@ -1,0 +1,17 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 350,
+  "height": 350,
+  "title": "Maginitude",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/earthquakes6.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "bin": true,
+      "field": "Magnitude"
+    },
+    "y": {"aggregate": "count"}
+  }
+}

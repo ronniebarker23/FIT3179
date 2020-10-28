@@ -43,11 +43,6 @@
               {"field": "Continent", "type": "nominal"},
               {"field": "Country", "type": "nominal"},
               {"field": "Depth", "type": "quantitative", "format": ","},
-              {
-                "field": "Horizontal_Distance",
-                "type": "quantitative",
-                "format": ","
-              },
               {"field": "Date", "type": "temporal", "format": "%m/%d/%Y"}
             ]
           }

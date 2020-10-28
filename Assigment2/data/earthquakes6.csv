@@ -1,4 +1,4 @@
-"","Country","Date","Time","Latitude","Longitude","Type","Depth","Depth.Error","Depth.Seismic.Stations","Magnitude","Magnitude.Type","Magnitude.Error","Magnitude.Seismic.Stations","Azimuthal.Gap","Horizontal.Distance","Horizontal.Error","Root.Mean.Square","ID","Source","Location.Source","Magnitude.Source","Status","Year","Continent"
+"","Country","Date","Time","Latitude","Longitude","Type","Depth","Depth.Error","Depth.Seismic.Stations","Magnitude","Magnitude.Type","Magnitude.Error","Magnitude.Seismic.Stations","Azimuthal.Gap","Horizontal_Distance","Horizontal.Error","Root.Mean.Square","ID","Source","Location.Source","Magnitude.Source","Status","Year","Continent"
 "1","Afghanistan","04/10/2016","10:28:59",36.4725,71.1311,"Earthquake",212,1.8,NA,6.6,"MWW",NA,NA,17,0.789,6.5,1.03,"US20005GSG","US","US","US","Reviewed",2016,"Asia"
 "2","Afghanistan","10/26/2015","09:09:43",36.5244,70.3676,"Earthquake",231,1.9,NA,7.5,"MWW",NA,NA,18,0.622,6.7,1.43,"US10003RE5","US","US","US","Reviewed",2015,"Asia"
 "3","Afghanistan","10/26/2015","09:09:32",36.459,70.6847,"Earthquake",206.94,4.6,NA,5.9,"MB",0.053,133,18,0.671,6.5,1.11,"US100042N2","US","US","US","Reviewed",2015,"Asia"

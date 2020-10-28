@@ -5,7 +5,8 @@
   "title": "Magnitude",
   "data": {
     "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/earthquakes6.csv"
-  },"params": [
+  },
+  "params": [
     {
       "name": "Continent_selection",
       "bind": {
@@ -39,9 +40,9 @@
   ],
   "mark": "bar",
   "encoding": {
-    "x": {"bin": true, "field": "Magnitude","title":"Magnitude"},
-    "y": {"aggregate": "count","axis": {"grid": false},"title":"Frequency"},
-     "color": {
+    "x": {"bin": {"extent":[5,9]}, "field": "Magnitude", "title": "Magnitude","scale": {"domain": [5,9]}},
+    "y": {"aggregate": "count", "axis": {"grid": false}, "title": "Frequency"},
+    "color": {
       "field": "Continent",
       "type": "nominal",
       "scale": {

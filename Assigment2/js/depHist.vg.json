@@ -40,7 +40,7 @@
   ],
   "mark": "bar",
   "encoding": {
-    "x": {"bin": true, "field": "Depth", "title": "Depth"},
+    "x": {"bin": {"extent":[0,700]}, "field": "Depth", "title": "Depth","scale": {"domain": [0,700]}},
     "y": {"aggregate": "count", "axis": {"grid": false}, "title": "Frequency"},
     "color": {
       "field": "Continent",
@@ -55,7 +55,8 @@
           "#dee64c",
           "#158eb0"
         ]
-      },"legend":null
+      },
+      "legend": null
     }
   }
 }

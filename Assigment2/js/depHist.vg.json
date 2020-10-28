@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 350,
+  "height": 350,
+  "title": "Depth",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/earthquakes6.csv"
+  },"params": [
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Africa",
+          "Americas",
+          "Asia",
+          "Europe",
+          "Oceania",
+          "Ocean"
+        ],
+        "labels": [
+          "Show All",
+          "Africa",
+          "Americas",
+          "Asia",
+          "Europe",
+          "Oceania",
+          "Ocean"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {"bin": true, "field": "Depth"},
+    "y": {"aggregate": "count","axis": {"grid": false}},
+     "color": {
+      "field": "Continent",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Africa", "Americas", "Asia", "Europe", "Oceania", "Ocean"],
+        "range": [
+          "#f0a313",
+          "#ed72c4",
+          "#e81c0e",
+          "#64068c",
+          "#dee64c",
+          "#158eb0"
+        ]
+      }
+    }
+  }
+}

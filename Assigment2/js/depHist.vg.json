@@ -5,7 +5,8 @@
   "title": "Depth",
   "data": {
     "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/data/earthquakes6.csv"
-  },"params": [
+  },
+  "params": [
     {
       "name": "Continent_selection",
       "bind": {
@@ -39,9 +40,9 @@
   ],
   "mark": "bar",
   "encoding": {
-    "x": {"bin": true, "field": "Depth", "title":"Depth"},
-    "y": {"aggregate": "count","axis": {"grid": false},"title":"Frequency"},
-     "color": {
+    "x": {"bin": true, "field": "Depth", "title": "Depth"},
+    "y": {"aggregate": "count", "axis": {"grid": false}, "title": "Frequency"},
+    "color": {
       "field": "Continent",
       "type": "nominal",
       "scale": {
@@ -54,7 +55,7 @@
           "#dee64c",
           "#158eb0"
         ]
-      }
+      },"legend":null
     }
   }
 }

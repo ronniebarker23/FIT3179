@@ -34,12 +34,14 @@
               "type": "quantitative",
               "scale": {
                 "type": "threshold",
-                "domain": [0,200,400,600],
-                "range": [50,100,200,400,800]
+                "domain": [0, 200, 400, 600],
+                "range": [50, 100, 200, 400, 800]
               }
             },
             "tooltip": [
               {"field": "Magnitude", "type": "quantitative", "format": ","},
+              {"field": "Continent", "type": "nominal"},
+              {"field": "Country", "type": "nominal"},
               {"field": "Depth", "type": "quantitative", "format": ","},
               {
                 "field": "Horizontal_Distance",

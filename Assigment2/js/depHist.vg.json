@@ -39,8 +39,8 @@
   ],
   "mark": "bar",
   "encoding": {
-    "x": {"bin": true, "field": "Depth"},
-    "y": {"aggregate": "count","axis": {"grid": false}},
+    "x": {"bin": true, "field": "Depth", "title":"Depth"},
+    "y": {"aggregate": "count","axis": {"grid": false},"title":"Frequency"},
      "color": {
       "field": "Continent",
       "type": "nominal",

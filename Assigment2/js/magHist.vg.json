@@ -39,8 +39,8 @@
   ],
   "mark": "bar",
   "encoding": {
-    "x": {"bin": true, "field": "Magnitude"},
-    "y": {"aggregate": "count","axis": {"grid": false}},
+    "x": {"bin": true, "field": "Magnitude","title":"Magnitude"},
+    "y": {"aggregate": "count","axis": {"grid": false},"title":"Frequency"},
      "color": {
       "field": "Continent",
       "type": "nominal",

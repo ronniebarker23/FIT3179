@@ -10,7 +10,7 @@
         "url": "https://raw.githubusercontent.com/ronniebarker23/FIT3179/main/Assigment2/js/ne_50m_admin_0_countries.json",
         "format": {"type": "topojson", "feature": "ne_50m_admin_0_countries"}
       },
-      "mark": {"type": "geoshape", "fill": "#e5f5e0", "stroke": "grey"}
+      "mark": {"type": "geoshape", "fill": "#f5e9a6", "stroke": "grey"}
     },
     {
       "data": {
